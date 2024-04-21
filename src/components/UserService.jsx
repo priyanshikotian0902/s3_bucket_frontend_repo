@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const USERS_REST_API_URL ='http://3.110.107.111:8089/users';
+const USERS_REST_API_URL ='tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/users';
 
 class UserService {
     getUsers() {
