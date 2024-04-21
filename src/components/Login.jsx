@@ -13,7 +13,7 @@ const Login = () => {
 
     try {
       
-      const response = await axios.post("http://3.110.107.111:8089/users/login", {
+      const response = await axios.post("tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/users/login", {
         email,
         password,
       });
