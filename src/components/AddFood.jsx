@@ -29,7 +29,7 @@ class AddFoodToDatabase extends Component {
         };
 
         try {
-            const response = await axios.post('tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/addFood', newCustomizedFoodItemData);
+            const response = await axios.post('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/addFood', newCustomizedFoodItemData);
             console.log('Food added successfully:', response.data);
             window.location.href = "/add-food";
         } catch (error) {
