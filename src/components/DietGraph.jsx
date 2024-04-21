@@ -12,7 +12,7 @@ class DietGraph extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://3.110.107.111:8089/calories/all')
+    axios.get('tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/users/calories/all')
       .then(response => {
         if (!Array.isArray(response.data)) {
           throw new Error('Data is not an array.');
