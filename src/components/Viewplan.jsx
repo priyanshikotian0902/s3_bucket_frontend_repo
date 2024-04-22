@@ -19,7 +19,7 @@ class DateDetails extends Component {
     try {
       const formattedDate = `${selectedDate.getFullYear()}-${selectedDate.getMonth() + 1}-${selectedDate.getDate()}`;
 
-      const response = await axios.get('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/date', {
+      const response = await axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/date', {
         params: {
           date: formattedDate
         }

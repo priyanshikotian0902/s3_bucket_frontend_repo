@@ -22,7 +22,7 @@ class Graph extends Component {
   }
 
   componentDidMount() {
-    axios.get('tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/bmi')
+    axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/bmi')
       .then(response => {
         const bmiData = response.data;
         const chartData = bmiData.map(data => data.bmiresult);
@@ -63,7 +63,7 @@ class Graph extends Component {
   
     try {
       const formattedDate = this.state.date.toISOString().slice(0, 10);
-      const response = await axios.post('tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/postbmi', {
+      const response = await axios.post('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/postbmi', {
         bmiresult: this.state.bmiresult,
         date: formattedDate, // Send the formatted date
        
@@ -82,7 +82,7 @@ class Graph extends Component {
   async handleRemoveClick(index, date) {
     try {
       // Send a DELETE request to your API endpoint with the date as a query parameter
-      const response = await axios.delete(`tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/delbmi?date=${date}`);
+      const response = await axios.delete(`tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/delbmi?date=${date}`);
       
       // Check if the request was successful (status code 200)
       if (response.status === 200) {

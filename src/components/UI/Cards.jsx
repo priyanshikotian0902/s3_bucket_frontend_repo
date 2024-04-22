@@ -16,7 +16,7 @@ const Cards = () => {
   const [avgBMI, setAvgBMI] = useState(null);
 
   useEffect(() => {
-    axios.get('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/bmi')
+    axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/bmi')
       .then(response => {
         const bmiData = response.data;
         const chartData = bmiData.map(data => data.bmiresult);
@@ -34,7 +34,7 @@ const Cards = () => {
         console.error('Error fetching BMI data:', error);
       });
 
-    axios.get('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/calories/all')
+    axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/calories/all')
       .then(response => {
         setTableData(response.data);
 
@@ -49,7 +49,7 @@ const Cards = () => {
   }, []);
 
   useEffect(() => {
-    axios.get('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/bmi')
+    axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/bmi')
       .then(response => {
         const bmiData = response.data;
         const chartData = bmiData.map(data => data.bmiresult);
@@ -62,7 +62,7 @@ const Cards = () => {
         console.error('Error fetching BMI data:', error);
       });
 
-    axios.get('http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/calories/all')
+    axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/calories/all')
       .then(response => {
         setTableData(response.data);
       })
