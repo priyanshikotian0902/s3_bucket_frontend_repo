@@ -19,7 +19,7 @@ class DateDetails extends Component {
     try {
       const formattedDate = `${selectedDate.getFullYear()}-${selectedDate.getMonth() + 1}-${selectedDate.getDate()}`;
 
-      const response = await axios.get('tartanyan-alb-1646139257.ap-south-1.elb.amazonaws.com/date', {
+      const response = await axios.get('http://43.204.211.170:8089/date', {
         params: {
           date: formattedDate
         }
@@ -40,7 +40,7 @@ class DateDetails extends Component {
    async handleRemoveClick(id, index) {
     try {
       // Send a DELETE request to your API endpoint with the ID as a parameter
-      await axios.delete(`http://tartanyan-alb-378143014.ap-south-1.elb.amazonaws.com/plan/${id}`); // Replace with your actual API endpoint
+      await axios.delete(`http://43.204.211.170:8089/plan/${id}`); // Replace with your actual API endpoint
       
       // Update the state to remove the deleted detail
       const updatedDetails = this.state.details.filter((_, i) => i !== index);
